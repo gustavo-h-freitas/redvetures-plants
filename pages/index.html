@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Redventure plants</title>
+  <link rel="stylesheet" href="../style/style.css">
+  <link rel="stylesheet" href="../style/defaultClasses.css">
+  <link rel="shortcut icon" href="/assets/favicon.ico" type="image/x-icon">
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+</head>
+<body>
+  <section class="hero-header relative">
+    
+    <div class="hero-text page-padding">
+      <img src="../assets/icons/logo-white.svg" alt="">
+      <h1>Find your next green friend</h1>
+      <img src="../assets/icons/arrow-down.svg" alt="" id="arrow-down">
+    </div>
+
+    <div class="grid hero-bg hidden lg:grid">
+      <img src="../assets/hero/desktop/left-leaves.png" alt="">
+      <img src="../assets/hero/desktop/plantperson.png" alt="">
+      <img src="../assets/hero/desktop/right-leaves.png" alt="">
+    </div>
+
+    <div class="grid hero-bg-mobile lg:hidden">
+      <img src="../assets/hero/mobile/mobile-leaves.png" alt="">
+      <img src="../assets/hero/mobile/mobile-plantperson.png" alt="">
+    </div>
+  </section>
+
+  <section class="grid lg:grid-cols-3 page-padding align-center">
+    <div class="card-selector mb-16 lg:mb-0">
+      <div>
+        <img src="../assets/illustrations/sun.png" alt="">
+      </div>
+      <p><b>1.</b> Set the amount of <b>sunlight</b> your plant will get</p>
+      <select id="sun">
+        <option selected disabled>Select...</option>
+        <option value="no">No sun</option>
+        <option value="low">Low sun</option>
+        <option value="high">A lot of sun</option>
+      </select>
+    </div>
+
+    <div class="card-selector mb-16 lg:mb-0">
+      <div>
+        <img id="watering" src="../assets/illustrations/wateringcan.png" alt="">
+      </div>
+      <p><b>2.</b> How often do you want to <b>water</b> your plant?</p>
+      <select id="water">
+        <option selected disabled>Select...</option>
+        <option value="regularly">Regularly</option>
+        <option value="daily">Daily</option>
+        <option value="rarely">Rarely</option>
+      </select>
+    </div>
+
+    <div class="card-selector mb-16 lg:mb-0">
+      <div>
+        <img src="../assets/illustrations/dog.png" alt="">
+      </div>
+      <p><b>3.</b> Do you have pets? Do they chew plants?</p>
+      <select id="pets">
+        <option selected disabled>Select...</option>
+        <option value="true">Yes</option>
+        <option value="false">No</option>
+      </select>
+    </div>
+  </section>
+
+  <section class="plants">
+    <div class="no-results flex flex-col lg:flex-row page-padding" id="no-results">
+      <div class="flex-1 mb-4">
+        <h1>No results yet...</h1>
+        <p>Use the filters above to find the plant that best fits your environment :)</p>
+      </div>
+
+      <div  class="flex-1 flex justify-center">
+        <img src="../assets/illustrations/no-results.png" alt="">
+      </div>
+    </div>
+
+    <div class="picks page-padding hidden" id="picks">
+      <img src="../assets/illustrations/pick.png" alt="">
+      <h2>Our picks for you</h2>
+    </div>
+
+    <div class="results-desktop page-padding lg:grid grid-cols-4 hidden" id="results-desktop"></div>
+
+    <div class="results-mobile scroll-snap flex flex-nowrap w-full lg:hidden" id="results-mobile">
+      
+    </div>
+  </section>
+
+  <div class="page-padding ">
+    <button class="back-top flex align-center justify-center" id="back-top">
+      <img src="../assets/icons/arrow-up.svg" alt="">
+      <span>back to the top</span>
+    </button>
+  </div>
+</body>
+<script type="module" src="../script/index.mjs"></script>
+</html>

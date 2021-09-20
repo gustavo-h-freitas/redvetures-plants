@@ -1,0 +1,125 @@
+.grid {
+  display: grid;
+}
+
+.block {
+  display: block;
+}
+
+.hidden {
+  display: none;
+}
+
+.flex {
+  display: flex;
+}
+
+.flex-nowrap {
+  flex-wrap: nowrap;
+}
+
+.w-full {
+  width: 100%;
+}
+
+.p-3 {
+  padding: 0.75rem;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.align-center {
+  align-items: center;
+}
+
+.grid-cols-3 {
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 7.75rem;
+}
+
+.grid-cols-4 {
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 1rem;
+}
+
+.grid-cols-1 {
+  grid-template-columns: 1fr;
+}
+
+.relative {
+  position: relative;
+}
+
+.page-padding {
+  padding: 56px 15%;
+}
+
+.flex-1 {
+  flex: 1;
+}
+
+.gap-1 {
+  gap: 0.25rem;
+}
+
+.flex-col {
+  flex-direction: column;
+}
+
+
+.absolute {
+  position: absolute;
+}
+
+.mb-4 {
+  margin-bottom: 1rem;
+}
+
+.mb-0 {
+  margin-bottom: 0;
+}
+
+.mb-16 {
+  margin-bottom: 4rem;
+}
+
+@media (min-width: 1024px) {
+  .lg\:grid-cols-3 {
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 7.75rem;
+  }
+
+  .lg\:mb-4 {
+    margin-bottom: 1rem;
+  }
+
+  .lg\:mb-0 {
+    margin-bottom: 0;
+  }
+
+  .lg\:mb-16 {
+    margin-bottom: 4rem;
+  }
+
+  .lg\:flex-row {
+    flex-direction: row;
+  }
+
+  .lg\:hidden {
+    display: none;
+  }
+
+  .lg\:block {
+    display: block;
+  }
+
+  .lg\:grid {
+    display: grid;
+  }
+}
